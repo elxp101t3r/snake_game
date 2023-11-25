@@ -7,14 +7,13 @@ screen.bgcolor('black')
 screen.title('SnakeGame')
 
 
-x_pos = 0
+positions = [(0, 0), (-20, 0), (-40, 0)]
 
-for i in range(0, 3):
-    i = Turtle()
-    i.shape('square')
-    i.color('white')
-    i.setposition(x=x_pos, y=0)
-    x_pos -= 20
+for p in positions:
+    new_block = Turtle()
+    new_block.shape('square')
+    new_block.color('white')
+    new_block.setposition(p)
    
 
 
