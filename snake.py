@@ -2,6 +2,10 @@ from turtle import Turtle
 
 S_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_D = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
 class Snake:
     
@@ -32,19 +36,23 @@ class Snake:
     
     def up(self):
         """Moving the snake up"""
-        self.head.setheading(90)
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
         
         
     def down(self):
         """Moving the snake down"""
-        self.head.setheading(270)
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
     
     def left(self):
         """Moving the snake left"""
-        self.head.setheading(180)
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
        
     
     def right(self):
         """Moving the snake right"""
-        self.head.setheading(0)
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
         
