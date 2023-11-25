@@ -5,8 +5,6 @@ import time
 
 
 snake = Snake()
-snake.snake_create()
-
 
 game_mode = True
 

@@ -1,12 +1,12 @@
 from turtle import Turtle
 
+S_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 
 class Snake:
     
-    
     def __init__(self):
-        self.positions = [(0, 0), (-20, 0), (-40, 0)]
         self.blocks = []
+        self.snake_create()
         
         
     def snake_create(self):
