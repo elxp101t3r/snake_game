@@ -8,6 +8,7 @@ class Snake:
     def __init__(self):
         self.blocks = []
         self.snake_create()
+        self.head = self.blocks[0]
         
         
     def snake_create(self):
@@ -26,24 +27,24 @@ class Snake:
             n_x = self.blocks[block - 1].xcor()
             n_y = self.blocks[block - 1].ycor()
             self.blocks[block].goto(n_x, n_y)
-        self.blocks[0].forward(MOVE_D)
+        self.head.forward(MOVE_D)
     
     
     def up(self):
         """Moving the snake up"""
-        self.blocks[0].setheading(90)
+        self.head.setheading(90)
         
         
     def down(self):
         """Moving the snake down"""
-        self.blocks[0].setheading(270)
+        self.head.setheading(270)
     
     def left(self):
         """Moving the snake left"""
-        self.blocks[0].setheading(180)
+        self.head.setheading(180)
        
     
     def right(self):
         """Moving the snake right"""
-        self.blocks[0].setheading(0)
+        self.head.setheading(0)
         
