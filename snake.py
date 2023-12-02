@@ -23,6 +23,10 @@ class Snake:
             new_block.color('white')
             new_block.setposition(p)
             self.blocks.append(new_block)
+    
+    def increase_body(self):
+        last_block = self.blocks[-1].clone()
+        self.blocks.append(last_block)
             
             
     def move(self):

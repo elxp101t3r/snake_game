@@ -26,6 +26,7 @@ while game_mode:
     if snake.head.distance(food) < 15:
         food.refresh()
         score.increase_score()
+        snake.increase_body()
     
     
 screen.exitonclick()
