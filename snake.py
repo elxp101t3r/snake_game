@@ -28,6 +28,12 @@ class Snake:
         last_block = self.blocks[-1].clone()
         self.blocks.append(last_block)
             
+    def head_hit_tail(self):
+        if len(self.blocks)>3 and self.blocks[0].distance(self.blocks[-1])<5:
+            return True
+        else:
+            return False
+
             
     def move(self):
         """Moving the snake"""

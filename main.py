@@ -32,4 +32,8 @@ while game_mode:
         score.game_over()
         game_mode = False
     
+    if snake.head_hit_tail() == True:
+        score.game_over()
+        game_mode = False
+    
 screen.exitonclick()
