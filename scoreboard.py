@@ -7,9 +7,14 @@ class ScoreBoard(Turtle):
         self.hideturtle()
         self.color('white')
         self.penup()
-        self.goto(-30, 270)
+        self.goto(-50, 270)
         self.score = 0
         self.write(f'Score: {self.score} ', move=False, font=('Courier', 15, 'normal'))
+    
+    
+    def game_over(self):
+        self.goto(0,0)
+        self.write('GAME OVER.', align='center', font='Courier')
     
     def increase_score(self):
         self.clear()
