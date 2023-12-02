@@ -1,11 +1,12 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from config import *
 from snake import Snake
+from food import Food
 import time
 
 
 snake = Snake()
-
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, 'Up')
