@@ -21,6 +21,4 @@ class ScoreBoard(Turtle):
         self.clear()
         self.score += 1
         self.write(f'Score: {self.score} ', move=False, font=('Courier', 15, 'normal'))
-
-        
-                
+              
