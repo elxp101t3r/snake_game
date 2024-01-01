@@ -24,6 +24,15 @@ class Snake:
             new_block.setposition(p)
             self.blocks.append(new_block)
     
+    
+    def reset(self):
+        for block in self.blocks:
+            block.goto(10000, 10000)
+        self.blocks.clear()
+        self.snake_create()
+        self.head = self.blocks[0]
+    
+    
     def increase_body(self):
         last_block = self.blocks[-1].clone()
         self.blocks.append(last_block)
