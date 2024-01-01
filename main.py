@@ -30,10 +30,9 @@ while game_mode:
     
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         score.reset()
-        game_mode = False
     
     if snake.head_hit_tail() == True:
         score.reset()
-        game_mode = False
+        
     
 screen.exitonclick()
